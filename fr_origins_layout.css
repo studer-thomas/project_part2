@@ -1,0 +1,146 @@
+/*
+   
+   
+   Style Sheet for the I'd Rather Be in France 
+   Specifically for the Family Origins page!
+   Author: Thomas Studer
+   Student ID# 4316851
+   WEB110-N801: Project Part 1
+   Date:   3/18/24
+   
+   
+   Filename: pc_origins.css
+
+*/
+
+/* Page Body Styles */
+	body {
+    width: 95%;
+    min-width: 640px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+	overflow: auto;														/*Handle Overflow*/
+	}
+
+
+/* Image Styles */
+	img {
+    display: block;
+    width: 100%;
+	}
+
+	#introimg{												/*Use floated elements. Added this style rule to float the intro image of Amandus Studer to the right of the intro text section. */
+    float: left;
+    margin-left: 30px; 
+	width: 40%
+    height: auto; 
+	position: relative; 									/* Use relative positioning */
+    top: 10px; 												/* Move the image down by 10 pixels */
+	}
+
+/* Horizontal Navigation Styles */
+	.horizontal li {										/*Format lists*/
+    display: block;
+    float: left;
+    width: 20.00%; 
+	}
+	nav li a {
+    display: block;
+	}
+
+
+/* Grid Styles */
+	body {
+    display: grid;											/*Create a grid layout*/	
+    grid-template-columns: 1fr;
+	}
+			
+	header, footer {
+    grid-column: 1 / -1;
+	}
+	
+
+	#intro {												/*float. Added this to float the text to the left in the intro section.*/
+		clear: left;
+		float: left;
+		width: 60%
+	}
+	
+/*Major changes to the #sub section for the Family Origin page. This required that I use as a new style */
+	#sub1 {
+	clear: both;
+    display: grid;											/*Create a grid layout*/
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto auto; 
+	grid-column-gap: 20px; 
+	grid-row-gap: 20px; 
+	margin-bottom: 20px; 
+	}
+	#sub2 {
+    display: grid;											/*Create a grid layout*/
+    grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto; 
+	grid-column-gap: 20px; 
+	grid-row-gap: 20px; 
+	margin-bottom: 20px; 
+	}
+	#sub3 {
+    display: grid;											/*Create a grid layout*/
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto auto; 
+	grid-column-gap: 20px; 
+	grid-row-gap: 20px; 
+	margin-bottom: 20px; 
+	}
+
+/* Specials Styles */
+	div.specials {
+    min-height: 200px; 
+    outline: 3px solid rgb(157, 223, 245); 
+	
+	}
+
+/*============================================================*/
+/*Mobile Styles: 0px to 480px*/												/* Responsive design changes for small screen devices */
+/*============================================================*/
+@media only screen and (max-width: 480px){
+/* Adjustments for small screens */
+  body {
+    width: 90%; /* Adjust the width for smaller screens */
+    min-width: initial; /* Reset min-width */
+    max-width: initial; /* Reset max-width */
+    margin-left: auto;
+    margin-right: auto;
+	
+  }
+
+  /* Adjustments for horizontal navigation */
+  .horizontal li {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  /* Adjustments for grid */
+  #sub1, #sub2, #sub3 {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  /* Additional mobile styles */
+}
+
+	
+
+/*============================================================*/
+/*Mobile Styles: 481px and greater*/
+/*============================================================*/
+@media only screen and (min-width: 481px){
+	
+}
+/*============================================================*/
+/*Mobile Styles: 0px to 480px*/
+/*============================================================*/
+@media only screen and (min-width: 769px){
+	
+}
+
+

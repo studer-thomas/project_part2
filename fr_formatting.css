@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: Champagne;
+	src: url(cac_champagne.woff) format('woff'),
+	     url(cac_champagne.ttf) format('ttf');
+	
+}
+
+/*
+	Typographical Style Sheet for the I'd Rather Be in France website
+	Used for all pages: Home, Family Origins, Exploring France.
+	Author: Thomas Studer
+	Student ID# 4316851
+	WEB110-N801: Project Part 1
+	Date:   3/18/24
+   
+   Filename: pc_styles4.css
+
+*/
+
+html {
+   background-color: rgb(73, 157, 240); 									/*Format background*/
+}
+
+/* Page Body Styles */
+body {
+   background-color: rgb(255, 255, 245); 									/*Format background*/
+   font-family: Verdana, Geneva, Arial, sans-serif;   
+}
+
+
+/* Horizontal Navigation List Styles */
+
+
+nav.horizontal a {
+   background-color: rgb(157, 223, 245); 									/*Format background*/
+   font-family: Champagne, cursive; 										/*Format text*/
+   font-size: 1.5em; 
+   font-weight: 500; 
+   line-height: 1.8em;
+   text-align: center;
+   
+}  
+
+nav.horizontal a:link, 														/*Use pseudo classes for hyperlinks*/
+nav.horizontal a:visited {
+   color: rgb(239, 65, 53); 
+}
+
+nav.horizontal a:hover, 													/*Use pseudo classes*/
+nav.horizontal a:active {
+   background-color: rgb(73, 157, 240); 
+}   
+
+/* Section Styles */
+
+section#main {
+   padding-left: 20px;
+   padding-right: 20px; 
+}
+
+/* Article Styles */
+
+article > h1 {
+   font-family: Champagne, cursive; 										/*Format text*/
+   font-size: 2.3em; 														
+   font-weight: 550; 
+   margin: 0.3em 0; 
+   text-align: center; 
+   color: rgb(239, 65, 53); 
+}
+
+
+article p {																	/*Use contextual selectors*/
+   line-height: 1.2;
+   margin-bottom: 2em;
+}
+
+/*This font size is unique to the Family Origins page. */
+#sub1 p {																	
+	font-size: 1em;
+}
+
+/* Specials Styles */
+
+div.specials {
+   background-color: rgba(255, 255, 255, 0.15);								/*Format background*/
+   padding: 10px;
+}
+
+
+div.specials h1 {
+   font-family: Champagne, cursive;											/*Format text*/
+   font-size: 1.8em;
+   font-weight: normal;
+   margin: 0.3em 0;
+   text-align: center;
+   color: rgb(239, 65, 53); 
+}
+
+div.specials p {															/*Use contextual selectors*/
+   font-size: 0.8em;														/*Format text*/
+   margin-bottom: 1em;
+   line-height: 1.2;
+}
+
+div.specials a {
+   color: rgb(186, 186, 156);
+}
+
+
+
+
+
+/* Footer Styles    */
+
+footer {
+	color: rgb(239, 65, 53); 
+	background-color: rgb(157, 223, 245); 
+	font-size: 0.9em;
+	padding: 10px 0px;
+	text-align: center;
+} 
+

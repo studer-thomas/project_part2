@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+
+@font-face {													
+	font-family: Champagne;
+	src: url(cac_champagne.woff) format('woff'),
+	     url(cac_champagne.ttf) format('ttf');
+	
+}
+
+/*
+   I'd Rather Be In France
+	New Years Eve In Paris Page
+    Author: Thomas Studer
+    Date:   April 17, 2024
+  
+   Filename: paris_styles.css
+	   
+*/
+
+
+/* HTML and Body styles */
+
+html {
+   background: rgb(73, 157, 240);		
+   font-family: Verdana, Geneva, Arial, sans-serif;
+   min-height: 100%;
+}
+
+body { 
+   margin: 0px auto;
+   min-width: 340px;
+   max-width: 1020px;  
+   width: 100%;
+   min-height: 100%;
+    			
+}
+
+
+/* Header styles */
+
+header img#logoImg {
+   display: block;
+   width: 100%;
+}
+
+header {
+   background: linear-gradient(to bottom, black 70%, rgb(185, 102, 0));
+   border-bottom: 1px solid rgb(0, 0, 0);
+   color: white;
+   position: relative;
+   width: 100%;		
+   border: 12px solid rgb(255, 255, 245);		/*Changed from 2px Added this border and padding to see what it looks like*/
+
+}
+
+header > h1 {
+   position: absolute;
+   top: 100px;							/*Changed from 15px*/
+   right: 100px;						/*Changed from 10px*/
+   text-align: center;  				
+   font-size: 1.5em;					/*Changed from 1.3em;*/
+   letter-spacing: 0.05em;
+   line-height: 1em;
+   font-family: Champagne, cursive;		
+   font-weight: 600;					
+   color: red;							
+}
+header .special-title {					/*Added another h1 for the I'd rather be in France logo*/
+    top: 50px;
+	font-size: 50px; 					/* Changed from 2em font size */
+	font-family: Champagne, cursive;
+    color: red; 						
+	position: absolute; 				/* Position the new h1 element absolutely */
+    top: 0; 							/* Place it at the top of the header */
+    left: 50%; 							/* Move it to the center horizontally */
+    transform: translateX(-50%); 		/* Center it precisely */									
+}
+
+header > h2 {
+   position: absolute;
+   top: 15px;
+   left: 10px;
+   font-size: 0.9em;
+   font-weight: normal;
+   color: red;							
+}
+
+/* Navigation list styles */
+
+header nav.horizontal {
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   width: 100%;
+   -webkit-flex: 0 1;
+   flex: 0 1;   
+}
+
+body header nav ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+}
+
+nav.horizontal ul li {
+   -webkit-flex: 1 1;
+   flex: 1 1;
+   font-size: 2.5em;								/*Changed from 0.8em*/
+   line-height: 2.9em;								/*Changed from 1.5em*/
+   height: 2.5em; 									/*Changed from 1.5em*/
+   font-family: Champagne, cursive;					
+ 
+}
+
+nav.horizontal ul li a {
+   background-color: rgba(157, 223, 245);			
+   display: block;
+   font-size: 1.5em;								/*Added*/
+   color: rgb(239, 65, 53);					 		
+   font-weight: 550;								/*Added*/
+   text-align: center;
+}
+
+nav.horizontal ul li a:hover {
+   background-color: rgb(73, 157, 240);				
+}
+
+/* Time Clock Styles */
+
+div#dateNow {
+   display: block;
+   position: absolute;
+   top: 35px;
+   left: 10px;   
+   background-color: transparent;
+   border: hidden;
+   color: red;										
+   width: 140px;
+   font-size: 0.6em;
+   line-height: 1.1em;
+   font-family: 'Trebuchet MS', Helvetica, sans-serif;
+   font-weight: normal;
+}
+
+/* Styles for the Countdown Clock */
+
+div#countdown {
+   position: absolute;
+   bottom: 50px;
+   right: 15px;
+   width: 45%;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+
+}
+
+div#countdown div {
+   display: block;
+   text-align: center;
+   width: 100%;
+   line-height: 1.2em;
+   font-size: 0.5em;
+   font-family: segment14, sans-serif;
+   color: white;
+   margin: 0px 10px;
+   color: white;
+   text-align: center;
+   text-shadow: 0px 0px 2px black, 0px 0px 4px black, -1px 1px 8px white, 
+                1px -1px 8px white, -1px 1px 12px white, 1px -1px 12px white;
+}
+
+div#countdown div span {
+   font-size: 2em;   
+}
+
+/* Article Styles */
+
+article { 
+   background-color: rgb(255, 255, 245);	/*Changed from background: white*/
+ 						
+   display: flex;
+ 
+   flex-flow: row wrap; 
+}													
+article > section {							/*Added this formatting to get 3 boxes with borders*/
+   width: calc(33.33% - 20px); 				/* Changed from 20px which is the total margin space between columns */
+   margin: 15px; 							/* Changed margin from 10px */
+   padding: 10px; 							/* Changed from 10px */
+   box-sizing: border-box; 					/* Added this. Include padding and border in width calculation */
+}
+
+
+article section, article nav.vertical {
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px;
+}
+
+section p {
+   margin: 20px;
+}
+
+/*Section styles */
+
+article section{							
+   background-color: rgba(255, 255, 245);
+   outline: 3px solid rgb(157, 223, 245); 	/*Added border*/
+}
+
+															
+article > section h2 {									/*Added this h2 title*/
+   text-align: center; 									
+   font-family: Champagne, cursive; 					
+   font-size: 1.8em;
+   font-weight: normal;
+   color: rgb(239, 65, 53); 							
+}
+
+
+
+/* Page footer styles */
+
+footer {
+   clear: left;
+   display: block;
+}
+
+
+footer {
+   display: flex; 										/* Use flexbox */
+   justify-content: center; 							/* Center horizontally */
+   align-items: center; 								/* Center vertically */
+   font-style: normal;
+   text-align: center;
+   font-size: 0.9em;
+   line-height: 20px;
+   height: 40px; 										/* Changed from 20px */
+   background-color: rgb(157, 223, 245); 				/* Changed from rgb(215, 152, 0); */
+   color: rgb(239, 65, 33); 							/* Changed from white */
+}
+/* =============================================
+   Added this to try to fix flex issue for nav
+   =============================================
+*/
+/* Specify the media query for smaller screens */
+@media screen and (max-width: 600px) {
+    header nav.horizontal {
+        position: static; 								/* Reset the positioning */
+        width: auto; 									/* Reset the width */
+        bottom: auto; 									/* Reset the positioning */
+        left: auto; 									/* Reset the positioning */
+    }
+
+    body header nav ul {
+        -webkit-flex-flow: column nowrap; 				/* Change flex direction to column */
+        flex-flow: column nowrap; 						/* Change flex direction to column */
+        align-items: center; 							/* Center the items */
+    }
+
+    nav.horizontal ul li {
+        -webkit-flex: 1 0 auto; 						/* Reset flex */
+        flex: 1 0 auto; 								/* Reset flex */
+        font-size: 1.2em; 								/* Adjust font size for smaller screens */
+        line-height: 1.5em; 							/* Reset line height */
+        height: auto; 									/* Reset height */
+        font-family: 'Trebuchet MS', Helvetica, sans-serif; /* Reset font family */
+		text-align: center; 							/* Center the text */
+    }
+
+    nav.horizontal ul li a {
+        font-size: 1.2em; 								/* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 510px
+   =============================================
+*/
+@media only screen and (min-width:511px) {
+   
+   header > h1 {
+      font-size: 1.9em;
+   }
+   
+   header > h2 {
+      font-size: 1.1em;
+   }
+   
+   div#dateNow {
+      font-size: 0.9em;
+      line-height: 1em;
+   } 
+   
+   div#countdown {
+      font-size: 1.3em;
+   }
+   
+   footer address {
+      font-size: 0.6em;
+   }     
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width:641px) {
+      
+   header > h1 {
+      font-size: 2.4em;
+   }
+   
+   header > h2 {
+      font-size: 1.3em;
+   }  
+      
+   nav.horizontal ul li {
+      font-size: 1em;
+   }
+   
+   div#dateNow {
+      font-size: 1em;
+      line-height: 1.1em;
+      top: 40px;
+   }   
+   
+   div#countdown  {
+      font-size: 1.5em;
+   }    
+   
+   footer address {
+      font-size: 0.8em;
+   }   
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 720px
+   =============================================
+*/
+@media only screen and (min-width: 721px) {
+   header > h1 {
+      font-size: 3.3em;
+   }
+
+   header > h2 {
+      font-size: 1.5em;
+   }
+   
+   div#dateNow {
+      font-size: 1.1em;
+      line-height: 1.2em;
+      top: 40px;
+   }
+   
+   div#countdown {
+      font-size: 1.7em;
+   }      
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 1020px
+   =============================================
+*/
+@media only screen and (min-width: 1021px) {
+
+   body {
+      margin: 40px auto;
+   }   
+}

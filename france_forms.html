@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+   WEB110-N801 Project 
+   I'd Rather Be in France website: About Page
+   Author: Thomas Studer
+   Date:   3/18/24
+   
+   Filename: france_forms.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="keywords" content="France, French, Paris, travel" />					<!--Set metadata-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>			<!--Responsive design to configure the layout viewport-->
+   <title>I'd Rather Be in France: About</title>
+   <link href="paris_reset.css" rel="stylesheet" />			
+   <link href="fr_layout.css" rel="stylesheet" />									<!--Link to CSS files-->
+   <link href="fr_formatting.css" rel="stylesheet" />
+   <link href="fr_forms.css" rel="stylesheet" />									<!--This is the style sheet for the forms -->
+   <script src="fr_formsubmit.js"></script>											<!--Link to a JavaScript file and Send an alert using JavaScript-->
+
+</head>
+
+<body>
+   <header>
+      <img src="header_paris1.png" alt="I'd Rather Be in France" />
+      <nav class="horizontal">														<!--Include navigation list with hypertext links-->
+         <ul>																		<!--Use block elements-->
+            <li><a href="france_home.html" target="_blank">Home</a></li>			<!--Use pseudo classes: :hover-->
+            <li><a href="family_origins.html" target="_blank">Family Origins</a></li>
+            <li><a href="exploring_france.html" target="_blank">Exploring France</a></li>
+            <li><a href="paris_clock.html" target="_blank">New Years Eve In Paris</a></li>
+            <li><a href="france_forms.html" target="_blank">About</a></li>
+         </ul>
+      </nav>
+   </header>
+   
+   <section id="main">																<!--Use sectioning, grouping, and text-level elements-->
+         <article id="intro">
+            <h1><strong>Would you like to come along on one of my France adventures?</strong></h1> 
+            <p>Now You Can! I am in the process of developing small group tours of like minded people
+			to the most exciting and interesting regions of France. It's a country you can easily fall 
+			in love with: stunning nature, rich culture, exceptional architecture from medieval 
+			buildings to top-notch museums, and delicious cuisine.<p/>
+			<p>I understand that travel to France is more than checking off another destination. 
+			It’s about creating memories and sharing meaningful experiences with kindred spirits. 
+			With this philosophy in mind, I will work with you to design the vacation of a lifetime, 
+			helping you discover France’s beauty with my experience and expertise.<p/>
+			<p>Join us in Paris for New Years Eve! Imagine standing beneath the iconic Eiffel Tower as fireworks 
+			illuminate the night sky, creating a spectacle that will leave you 
+			breathless. This is your chance to create unforgettable memories 
+			and start the year with a sense of wonder and adventure. Just Register below.</p>
+			<p>Treat yourself to a trip to France you will remember for years with our fully 
+			customizable private France tour packages and insightful small group tours. Explore 
+			this country's beating heart, Paris, stunning Provence, Mediterranean Nice, and the 
+			French Riviera with tailor-made France tours .</p>
+			<p>Just fill out the Customer Information box, below, and we will contact you to start
+			planning the trip of a lifetime!</p>
+         </article>
+       <section id="form">																					<!--Create and format a form with multiple field sets-->
+        <form id="survey" action="http://www.example.com/france/survey" method="post">
+		<fieldset id="custInfo">
+				<legend>Traveler Information</legend>
+			<div class="formRow">
+				<label for="name">Name*</label>																<!--Create and format a form. Include input types: text-->		
+				<input name="custName" id="name" type="text" placeholder="first and last name" required/>	<!--Validate data by having certain fields required-->
+			</div>
+			<div class="formRow">
+				<label for="street">Street address</label>													<!--Create and format a form. Include input types: text-->
+				<input name="custStreet" id="street" type="text"/>
+			</div>
+			<div class="formRow">
+				<label for="city">City</label>																<!--Create and format a form. Include input types: text-->
+				<input name="custCity" id="city" type="text" value="Charlotte"/>
+			</div>
+			<div class="formRow">
+				<label for="state">State</label>															<!--Create and format a form. Include input types: text-->
+				<input name="custState" id="state" type="text" value="NC"/>
+			</div>
+			<div class="formRow">																		<!--Use the focus pseudo class to format valid and invalid selected boxes-->
+				<label for="zip">Postal code</label>														<!--Create and format a form. Include input types: text-->
+				<input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$"/>		<!--Validate data with patterns and field lengths-->
+			</div>
+			<div class="formRow">
+				<label for="phone">Phone number</label>														<!--Validate data with patterns and field lengths-->
+				<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>	
+			</div>
+			<div class="formRow">
+				<label for="mail">E-mail*</label>														<!--Use the focus pseudo class to format valid and invalid selected boxes-->
+				<input name="custEmail" id="mail" type="email" required/>									<!--Validate data by having certain fields required-->
+			</div>																			<!--Include at least one input that is set for a mobile keyboard type: email-->
+			
+			<div class="formRow">
+				<label for="info">Where did you hear about us?<br />(select all that apply)</label>
+				<select name="infoSrc" id="info" size="5" multiple>
+					<option value="internet">Internet</option>												<!--Create a selection list-->
+					<option value="mag">Magazine</option>
+					<option value="news">Newspaper</option>
+					<option value="word">Word of Mouth</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			
+			<div class="formRow">
+				<label for="dish">What's your favorite French food?</label>
+				<input name="favDish" id="dish" type="text" list="dishType" />								<!--Create a selection list-->
+				<datalist id="dishType">																	<!--Include a data list for input-->
+					<option value="Baguette">
+					<option value="Steak frites">
+					<option value="Crepes">
+					<option value="Coq au Vin">
+					<option value="Cassoulet">
+					<option value="Ratatouille">
+				</datalist>
+			</div>
+			
+			<div class="formRow">
+				<label for="dineSpin">How many times have you traveled to France?</label>					<!--Create and format a form. Include input types: spinner-->
+				<input name="dineout" id="dineSpin" type="number" value="1" step="1" min="0" max="20"/>
+			</div>
+			
+			<input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+			<label for="mailCB">Add me to your mailing list!</label>										<!--Create and format a form. Include input types: check box-->
+			
+			</fieldset>
+		
+			<fieldset id="expInfo">
+			<legend>Share Your Experience with our website</legend>
+			<div class="formRow">
+				<label for="visit">Date of visit</label>													<!--Create and format a form. Include input types: date-->
+				<input name="visitDate" id="visit" type="date" />											<!--Include at least one input set for a mobile keyboard type-->
+			</div>
+			<div class="formRow">
+				<label for="order">Reason for site visit</label>											<!--Create a selection list-->
+				<select name="orderType" id="order">
+					<option value="order1">Just browsing</option>
+					<option value="order2">Interested in France trip</option>
+					<option value="order3" selected>Planning a France trip now</option>
+					<option value="order4">Want more information</option>
+				</select>
+			</div>													
+			<div class="formRow">
+				<label>Was site navigation easy?</label>
+				<fieldset class="optGroup">											
+					<label for="fYes">Yes</label>
+					<input name="sFriend" id="fYes" value="yes" type="radio"/>								<!--Create and format a form. Include input types: radio buttons-->
+					<label for="fNo">No</label>
+					<input name="sFriend" id="fNo" value="no" type="radio"/>
+			</fieldset>																				
+			</div>																																									
+			<div class="formRow">
+				<label>Did the site load quickly?</label>
+				<fieldset class="optGroup">
+					<label for="cYes">Yes</label>
+					<input name="oCorrect" id="cYes" value="yes" type="radio"/>								<!--Create and format a form. Include input types: radio buttons-->
+					<label for="cNo">No</label>
+					<input name="oCorrect" id="cNo" value="no" type="radio"/>
+				</fieldset>
+			</div>
+			<div class="formRow">
+				<label>Was the information helpful?</label>
+				<fieldset class="optGroup">
+					<label for="hYes">Yes</label>
+					<input name="foodHot" id="hYes" value="yes" type="radio"/>								<!--Create and format a form. Include input types: radio buttons-->
+					<label for="hNo">No</label>
+					<input name="foodHot" id="hNo" value="no" type="radio"/>
+				</fieldset>
+			</div>
+			
+			<div class="formRow">
+				<label for="rangeBox">Rate the overall website<br /> (0=poor; 10=great)</label>				<!--Create and format a form. Include input types: range slider-->
+				0
+				<input name="serviceRate" id="rangeBox" type="range" value="5" step="1" max="10" />
+				10
+			</div>
+			
+			<label for="commBox">Tell us more about your experience!</label>								<!--Create and format a text area-->
+			<textarea name="custExp" id="commBox"></textarea>
+
+		
+		</fieldset>
+		
+		<div id="buttons">																					<!--Create a submit and cancel button-->
+			<input type="submit" value="Submit my Survey" />
+			<input type="reset" value="Cancel" />
+		</div>
+		
+	  </form>
+         </section>
+      </section>
+   
+      
+   
+   <footer>
+      I'd Rather Be in France! &copy; 2024 All Rights Reserved												<!--Include character references-->
+   </footer>
+</body>
+</html>

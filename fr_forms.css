@@ -1,0 +1,89 @@
+/*
+   WEB110-N801 Project 
+   I'd Rather Be in France website: About Page
+   Author: Thomas Studer
+   Survey Forms Style Sheet
+   Date:   March 29, 2024
+
+   Filename: fr_forms.css
+
+*/
+
+/* Form Layout Styles */
+	form#survey {														/*Create and format a form with multiple field sets*/
+		display: flex;
+		flex-flow: row wrap;
+	}
+	form#survey > fieldset{												/*Create and format a form with multiple field sets*/
+		background-color: rgb(157, 223, 245); 							
+		border-radius: 20px;
+		flex: 1 1 300px;
+		font-size: 0.85em;
+		padding: 10px;
+		margin: 10px;
+	}
+
+
+	div.formRow{														/*Create and format a form with multiple field sets*/
+		display: flex;
+		flex-flow: row wrap;
+		margin: 7px 0px;
+	}
+	div.formRow > * {
+		flex: 1 1 150px;
+	}
+
+
+/* Legend Styles */
+	legend {																		/*Create and format a form with multiple field sets*/
+		background-color: rgb(239, 65, 53); /*Changed from rgb(179, 20, 25) */
+		color: white;
+		padding: 5px;
+	}
+
+
+/* Text Area Styles */
+	textarea {																		/*Create and format a text box*/
+		margin-top: 10px;
+		height: 100px;
+		width: 95%;
+	}
+
+
+/* Spinner Styles */																/*Create and format a spinner*/
+	div.formRow > input#dineSpin {
+		flex: 0 0 50px;
+	}
+
+
+/* Form Button Styles */															/*Create and format buttons*/
+	div#buttons {
+		text-align: center;
+		width: 100%;
+	}
+	
+	input[type='submit'], input[type='reset'] {
+		font-size: 1.2em;
+		padding: 5px;
+		margin: 15px;
+	}
+
+
+/* Validation Styles */
+	input:focus, select:focus, textarea:focus {										/*Use the focus pseudo class to format valid and invalid selected boxes*/				
+		background-color: rgb(220, 255, 220);
+	}
+	
+	input#name:focus:valid,
+	input#zip:focus:valid,
+	input#phone:focus:valid,
+	input#mail:focus:valid {
+		background: rgb(220, 255, 220) url(rb_valid.png) bottom right/contain no-repeat;
+	}
+	
+	input#name:focus:invalid,
+	input#zip:focus:invalid,
+	input#phone:focus:invalid,
+	input#mail:focus:invalid {
+		background: rgb(255, 232, 233) url(rb_invalid.png) bottom right/contain no-repeat;
+	}
